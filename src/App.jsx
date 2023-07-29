@@ -12,6 +12,7 @@ import {
   CTA,
   Footer,
 } from './components'
+import Contact from './components/Contact'
 
 const App = () => (
   <div className="bg-primary w-fuill overflow-hidden">
@@ -30,7 +31,8 @@ const App = () => (
     <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
       <div className={`${styles.boxWidth}`}>
         <Stats /> <Business /> <Billing /> <CardDeal /> <Testimonials />
-        <Clients /> <CTA /> <Footer />
+        <Clients /> <CTA /> <Contact />
+        <Footer />
       </div>
     </div>
   </div>

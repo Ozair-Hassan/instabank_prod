@@ -1,6 +1,9 @@
 import styles from '../styles'
 import { discount, robot } from '../assets'
 import GetStarted from './GetStarted'
+import { Canvas } from '@react-three/fiber'
+import SpinningSphere from './SpinningSphere'
+import { OrbitControls } from '@react-three/drei'
 
 const Hero = () => {
   return (
@@ -18,8 +21,8 @@ const Hero = () => {
             className="w-[32px] h-[32px]"
           />
           <p className={`${styles.paragraph} ml-2`}>
-            <span className="text-white">20%</span> Discount For{' '}
-            <span className="text-white">1 Month</span> Account
+            <span className="text-yellow-300">15%</span> Discount For{' '}
+            <span className="text-yellow-300">3 Month</span> Account
           </p>
         </div>
 
@@ -42,15 +45,54 @@ const Hero = () => {
           percentage rates and fees
         </p>
       </div>
-
+      {/* bg-[url('src/assets/robot.png')]  bg-no-repeat bg-contain */}
       <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}
+        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative `}
       >
         <img
           src={robot}
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"
         />
+        <div className="absolute z-[10] -top-5 -left-20">
+          <Canvas>
+            <OrbitControls />
+            {/* Add lighting and other components you may want */}
+            <ambientLight intensity={0.5} />
+            <directionalLight
+              position={[0, 5, 10]}
+              intensity={1}
+            />
+
+            <SpinningSphere size={2.5} />
+          </Canvas>
+        </div>
+        <div className="absolute z-[10] -bottom-14 -left-20  ">
+          <Canvas>
+            <OrbitControls />
+            {/* Add lighting and other components you may want */}
+            <ambientLight intensity={0.5} />
+            <directionalLight
+              position={[0, 5, 10]}
+              intensity={1}
+            />
+
+            <SpinningSphere size={1.5} />
+          </Canvas>
+        </div>
+        <div className="absolute z-[10] -bottom-5 -right-10">
+          <Canvas>
+            <OrbitControls />
+            {/* Add lighting and other components you may want */}
+            <ambientLight intensity={0.5} />
+            <directionalLight
+              position={[0, 5, 10]}
+              intensity={1}
+            />
+
+            <SpinningSphere size={2} />
+          </Canvas>
+        </div>
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />
