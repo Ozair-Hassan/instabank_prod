@@ -1,4 +1,5 @@
 import styles from '../styles'
+import { useState, useEffect } from 'react'
 import { discount, robot } from '../assets'
 import GetStarted from './GetStarted'
 import { Canvas } from '@react-three/fiber'
@@ -47,16 +48,16 @@ const Hero = () => {
       </div>
       {/* bg-[url('src/assets/robot.png')]  bg-no-repeat bg-contain */}
       <div
-        className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative `}
+        className={`flex-1 flex ${styles.flexCenter} md:mt-0 mt-24 md:mb-0 mb-16 relative `}
       >
         <img
           src={robot}
           alt="billing"
-          className="w-[100%] h-[100%] relative z-[5]"
+          className="md:w-[100%] md:h-[100%] relative z-[5] "
         />
-        <div className="absolute z-[10] -top-5 -left-20">
+        <div className="absolute z-[10] md:-top-5 -left-20 xxs:-top-24 ">
           <Canvas>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
             {/* Add lighting and other components you may want */}
             <ambientLight intensity={0.5} />
             <directionalLight
@@ -67,9 +68,9 @@ const Hero = () => {
             <SpinningSphere size={2.5} />
           </Canvas>
         </div>
-        <div className="absolute z-[10] -bottom-14 -left-20  ">
+        <div className="absolute z-[10] md:-bottom-14 -left-20 xxs:-bottom-24">
           <Canvas>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
             {/* Add lighting and other components you may want */}
             <ambientLight intensity={0.5} />
             <directionalLight
@@ -77,12 +78,12 @@ const Hero = () => {
               intensity={1}
             />
 
-            <SpinningSphere size={1.5} />
+            <SpinningSphere size={1.25} />
           </Canvas>
         </div>
-        <div className="absolute z-[10] -bottom-5 -right-10">
+        <div className="absolute z-[10] md:-bottom-5 md:-right-10 xxs:-bottom-16 xxs:-right-16 ">
           <Canvas>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
             {/* Add lighting and other components you may want */}
             <ambientLight intensity={0.5} />
             <directionalLight
@@ -90,7 +91,7 @@ const Hero = () => {
               intensity={1}
             />
 
-            <SpinningSphere size={2} />
+            <SpinningSphere size={1.75} />
           </Canvas>
         </div>
 
