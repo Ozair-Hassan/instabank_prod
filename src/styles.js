@@ -6,7 +6,7 @@ const styles = {
   heading3:
     'font-poppins font-semibold xs:text-[20px] text-[16px] text-white xs:leading-[50.8px] leading-[40.8px] w-full',
   heading4:
-    'flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[60.8px] leading-[45px] text-gradient w-full mb-[15px] ml-[4px] ',
+    'flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[60.8px] leading-[45px]  w-full mb-[15px] ml-[4px] ',
   paragraph:
     'font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]',
   formInput:
