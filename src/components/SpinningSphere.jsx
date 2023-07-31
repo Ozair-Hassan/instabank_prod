@@ -2,13 +2,13 @@ import React, { useRef } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Sphere } from '@react-three/drei'
 
-const SpinningSphere = ({ size }) => {
+const SpinningSphere = ({ size, spinx, spiny }) => {
   const sphereRef = useRef()
 
   useFrame(() => {
     if (sphereRef.current) {
-      sphereRef.current.rotation.x += 0.01
-      sphereRef.current.rotation.y += 0.01
+      sphereRef.current.rotation.x += spinx
+      sphereRef.current.rotation.y += spiny
     }
   })
 

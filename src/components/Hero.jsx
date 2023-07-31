@@ -65,7 +65,11 @@ const Hero = () => {
               intensity={1}
             />
 
-            <SpinningSphere size={2.5} />
+            <SpinningSphere
+              size={2.5}
+              spinx={0.01}
+              spiny={0.01}
+            />
           </Canvas>
         </div>
         <div className="absolute z-[10] md:-bottom-14 -left-20 xxs:-bottom-24">
@@ -78,7 +82,11 @@ const Hero = () => {
               intensity={1}
             />
 
-            <SpinningSphere size={1.25} />
+            <SpinningSphere
+              size={1.25}
+              spinx={0.03}
+              spiny={0.03}
+            />
           </Canvas>
         </div>
         <div className="absolute z-[10] md:-bottom-5 md:-right-10 xxs:-bottom-16 xxs:-right-16 ">
@@ -91,7 +99,11 @@ const Hero = () => {
               intensity={1}
             />
 
-            <SpinningSphere size={1.75} />
+            <SpinningSphere
+              size={1.75}
+              spinx={0.02}
+              spiny={0.02}
+            />
           </Canvas>
         </div>
 
