@@ -36,6 +36,7 @@ const SpinningSphere = ({ size, spinx, spiny }) => {
           vec3 colorB = vec3(1.0, 0.85, 0.0);
 
           vec3 gradientColor = mix(colorA, colorB, vUv.y);
+        
 
           gl_FragColor = vec4(gradientColor, 1.0);
         }
