@@ -59,9 +59,7 @@ const Contact = () => {
             name="user_name"
             className={`w-[100%] h-[35px] p-[2px] ${styles.formInput} `}
           />
-          <p className={`${isNameError ? 'text-red-600' : 'hidden'}`}>
-            error here bro
-          </p>
+          <p className={`${isNameError ? 'text-red-600' : 'hidden'}`}>Error!</p>
           <label className={`${styles.heading3}`}>Email</label>
           <input
             type="email"

@@ -18,6 +18,26 @@
   scroll-behavior: smooth;
 }
 
+/* Hide the scrollbar by default */
+body::-webkit-scrollbar {
+  width: 12px;
+  background: black;
+}
+
+/* Show the scrollbar when the body has a class 'scrolling' */
+body.scrolling::-webkit-scrollbar {
+  width: 12px;
+}
+
+body.scrolling::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+}
+
+/* Optional: Add smooth transitions */
+::-webkit-scrollbar-thumb {
+  transition: background 0.2s ease;
+}
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
